@@ -98,7 +98,7 @@ $total_members = count($list);
 $total_pages = ceil($total_members / 5); //zakraglqme nagore
 $next_page = $getpage + 1;
 $prev_page = $getpage - 1;
-$url = "http://localhost/Softuni/Softuni_Homeworks/PHP_BASICS_SYNTAX-Lab/Problem_2_Render_students_info.php"; //patq na faila
+$url = "http://localhost/Softuni/Softuni-PHP-Web/PHP_BASICS_SYNTAX-Lab/Problem_2_Render_students_info.php"; //patq na faila
 
 if($getpage > 1){
     echo '<a href="'.$url.'?page='.$prev_page.'" style="color: green; text-decoration: none;">[Previous page]</a>';
