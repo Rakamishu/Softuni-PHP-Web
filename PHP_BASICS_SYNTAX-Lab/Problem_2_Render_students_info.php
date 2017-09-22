@@ -52,7 +52,7 @@ if(isset($_SESSION['names'], $_SESSION['ages'], $_SESSION['age_restriction']))
     $age_restriction = $_SESSION['age_restriction']; // 4ast 3 ot zada4ata - Filter Legal Students
     $getpage = isset($_GET['page']) ? $_GET['page'] : 1; //vzima teku6tata stranica ili ako ne e setnata slaga po default 1
     
-    $list = []; //sazdavame si nov masiv v koito 6te vkarvame otdelen masiv ot vseki potrebiteli i negovite imena i godini
+    $list = []; //sazdavame si nov masiv v koito 6te vkarvame otdelen masiv za vseki potrebitel i negovite imena i godini
     
     for($i = 0; $i < count($_SESSION['names']); $i++)
     {
