@@ -44,19 +44,18 @@ if(isset($_POST['filter'])){
      */
     $_SESSION['names'] = explode($_POST['delimeter'], $_POST['names']); 
     $_SESSION['ages'] = explode($_POST['delimeter'], $_POST['ages']);
-    $_SESSION['age_restriction'] = isset($_POST['age_restriction']) ? "on" : "off";
+    $_SESSION['age_restriction'] = isset($_POST['age_restriction']) ? "on" : "off"; // 4ast 3 ot zada4ata - Filter Legal Students
     header("Refresh:0");
 } 
 if(isset($_SESSION['names'], $_SESSION['ages'], $_SESSION['age_restriction']))
 {
-    $age_restriction = $_SESSION['age_restriction']; // 4ast 3 ot zada4ata - Filter Legal Students
     $getpage = isset($_GET['page']) ? $_GET['page'] : 1; //vzima teku6tata stranica ili ako ne e setnata slaga po default 1
     
     $list = []; //sazdavame si nov masiv v koito 6te vkarvame otdelen masiv za vseki potrebitel i negovite imena i godini
     
     for($i = 0; $i < count($_SESSION['names']); $i++)
     {
-        if($age_restriction == "on"){
+        if($_SESSION['age_restriction'] == "on"){
             /**
              * Dobavqme v masiva samo ako potrebitelq e nad 18.
              */
