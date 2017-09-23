@@ -1,7 +1,6 @@
 <?php
 //nedovar6ena - ne kombinira score-a na povtarq6tite otbori.
 $team = [];
-
 while(1)
 {
     $input = trim(fgets(STDIN));
@@ -18,11 +17,7 @@ while(1)
     $team[$input[0]]['score'] = $input[2];
         
 }
-
 foreach ($team as $t)
 {
     echo $t['name'].' => '.$t['score']."\n".'Most points scored by '.$t['player']."\n";
 }
-
-
-    
