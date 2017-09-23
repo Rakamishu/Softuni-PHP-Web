@@ -1,23 +1,28 @@
 <?php
+//nedovar6ena - ne kombinira score-a na povtarq6tite otbori.
+$team = [];
 
-$input = 'LA|Bryant|70
-L%@A|Odom|67
-James|%CAVA@@LIE$$$RS|54
-C@art%er|GR%%IZZ%%LIE@S@@@|49
-Anthony|KNICKS|11
-UTAH|Jo%%%%hn$$so@@n|24
-S@@PU*R*S$|Ga***so**l|32
-Jone@@@@s|KNICKS|5';
-
-
-$input = preg_replace('/[^A-Za-z0-9|\n]/', '', $input);
-$split_new_lines = explode("\n", $input);
-
-
-foreach($split_new_lines as $team)
+while(1)
 {
-    $explode = explode("|", $team);
-
-    echo $explode[0].' => '.$explode[2]."\nMost points scored by ".$explode[1]."\n";
+    $input = trim(fgets(STDIN));
+    if($input == "Result")
+    {
+        break;
+    }
+    
+    $input = preg_replace('/[^A-Za-z0-9|\n]/', '', $input);
+    $input = explode("|", $input);
+    
+    $team[$input[0]]['name'] = $input[0];
+    $team[$input[0]]['player'] = $input[1];
+    $team[$input[0]]['score'] = $input[2];
+        
 }
 
+foreach ($team as $t)
+{
+    echo $t['name'].' => '.$t['score']."\n".'Most points scored by '.$t['player']."\n";
+}
+
+
+    
