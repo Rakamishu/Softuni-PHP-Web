@@ -3,7 +3,7 @@
     <input type="submit" name="submit" value="Count words" />
 </form>
 <?php
-if(isset($_POST['submit']))
+if(isset($_POST['submit']) && !empty($_POST['input']))
 {
     $input = $_POST['input'];
 
