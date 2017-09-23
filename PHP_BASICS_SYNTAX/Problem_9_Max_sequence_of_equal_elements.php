@@ -1,17 +1,20 @@
 <?php
 
-$input = "0 1 1 5 2 2 6 3 3";
+$input = "2 1 1 2 3 3 2 2 2 1";
 $explode = explode(" ", $input);
-$count = count($explode);
+$count = array_count_values($explode);
 
 
 $start = 0;
-$len = 1;
+$max_seq = 1;
 
-for($i = 1; $i < $count; $i++)
+foreach($count as $sequence => $occurance)
 {
-    if($explode[$i] == $explode[$i - 1])
+    if($occurance > $start)
     {
-        $len++;
+        $start = $occurance;
+        $max_seq = $sequence;
     }
 }
+echo str_repeat($max_seq." ", $sequence);
+
