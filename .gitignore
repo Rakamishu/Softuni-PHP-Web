@@ -16,6 +16,7 @@ nbdist/
 # Created by https://www.gitignore.io/api/netbeans
 
 ### NetBeans ###
+nbproject/
 nbproject/private/
 build/
 nbbuild/
