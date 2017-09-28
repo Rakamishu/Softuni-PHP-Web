@@ -1,6 +1,6 @@
 <?php
 
-$input = "2 1 1 2 3 3 2 2 2 1";
+$input = "0 1 1 5 2 2 6 3 3";
 $explode = explode(" ", $input);
 $count = array_count_values($explode);
 
