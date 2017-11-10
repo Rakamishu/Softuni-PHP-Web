@@ -1,0 +1,1 @@
+<a href="?input=cars">Cars</a> | <a href="?input=customers">Customers</a> | <a href="?input=sales">Sales</a>
